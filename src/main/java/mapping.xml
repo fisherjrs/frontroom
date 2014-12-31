@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapping>
+	<description>Description of the mapping</description>
+	<class name="marshalling.Settings">	           	
+	   <field name="fooEnabled" type="boolean">
+	      <bind-xml name="foo-enabled" node="attribute"/>
+	   </field>	
+	</class>
+</mapping>

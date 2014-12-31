@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  set status to trace to see Log4j internal logging -->
+<Configuration status="warn" monitorInterval="5">
+  <Appenders>
+  
+  	<File name="rootlogfile" fileName="frontroomrootlogfile.txt">
+      <PatternLayout>
+        <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+      </PatternLayout>
+    </File>
+   
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  
+  </Appenders>
+  
+  <!-- TRACE, DEBUG, INFO, WARN, ERROR, and FATAL -->
+  <Loggers>   	
+    
+    <Root level="debug">
+      <AppenderRef ref="Console" level="trace"/>
+      <AppenderRef ref="rootlogfile" level="trace" />
+    </Root>   
+  
+  </Loggers>
+</Configuration>
